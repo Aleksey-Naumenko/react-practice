@@ -1,0 +1,26 @@
+.clock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 120px;
+    margin-right: 15px;
+  
+    &__location {
+      text-transform: uppercase;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 100%;
+      margin-bottom: 8px;
+      font-weight: 700;
+
+      
+    }
+  
+    &__time {
+      border: 3px solid #ff7f50;
+      border-radius: 8px;
+      padding: 8px;
+      text-align: center;
+    }
+  }
