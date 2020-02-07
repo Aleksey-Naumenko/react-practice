@@ -8,7 +8,7 @@ const getAge = birthDate => {
 const Greeting = props => {
     return (
         <h1 className="greeting_text">
-            {`My name is ${props.firstName} ${props.lastName}. I'm ${getAge(props.birthDate)}`}
+            {`My name is ${props.name} ${props.lastName}. I'm ${getAge(props.birthDate)}`}
         </h1>
     )
 };

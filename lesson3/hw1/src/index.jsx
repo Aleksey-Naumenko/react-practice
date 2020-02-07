@@ -5,7 +5,7 @@ import Greeting from './Greeting';
 const rootElement = document.querySelector('#greeting');
 
 ReactDOM.render(<Greeting
-    firstName="John"
+    name="John"
     lastName="Doe"
     birthDate={"1992-11-06T22:00:00.000Z"}
 />, rootElement);
