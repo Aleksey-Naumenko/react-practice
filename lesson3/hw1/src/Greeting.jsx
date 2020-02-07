@@ -8,7 +8,7 @@ const getAge = birthDate => {
 const Greeting = props => {
     return (
         <header className="greeting">
-            {`My name is ${props.firstName} ${props.lastName}. I'm ${getAge(props.birthDate)}`}
+            {`My name is ${props.firstName} ${props.lastName}. I'm ${getAge(props.birthDate)} years old`}
         </header>
     )
 };
