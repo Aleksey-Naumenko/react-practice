@@ -6,11 +6,10 @@ const getAge = birthDate => {
 }
 
 const Greeting = props => {
-    console.log(props.birthDate);
     return (
-        <span className="greeting_text">
+        <h1 className="greeting_text">
             {`My name is ${props.firstName} ${props.lastName}. I'm ${getAge(props.birthDate)}`}
-        </span>
+        </h1>
     )
 };
 
