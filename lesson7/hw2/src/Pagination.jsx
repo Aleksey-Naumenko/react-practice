@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Pagination = props => {
-    const disabledButton = props.showedUsers == 0 ? true : props.leftButtonState;
+    const disabledButton = props.showedUsers <= 0 ? true : props.leftButtonState;
 
     return (
 
