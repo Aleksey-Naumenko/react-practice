@@ -33,10 +33,6 @@ class UsersList extends Component {
             usersList = this.props.users;
         }
 
-        console.log(usersList);
-        console.log(this.state.sorting);
-
-
         return (
             <>
                 <button className="btn" onClick={this.toggleSorting}>{
