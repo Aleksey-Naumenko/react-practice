@@ -26,13 +26,10 @@ class UsersList extends Component {
         })
     }
 
-
-
-
     render() {
         const usersToShow = this.state.showedUsers;
         const showedUsers = this.props.users.slice(usersToShow, usersToShow + 3);
-        console.log(showedUsers);
+
         return (
             <>
             <Pagination

@@ -11,11 +11,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .users {
     list-style-type: none;
     padding: 0;
+    margin-top: 0;
 }
 
 .user {
@@ -45,6 +47,7 @@ body {
     border: none;
     text-transform: uppercase;
     padding: 8px;
+    margin: 0 10px 0 10px;
     cursor: pointer;
     background-color: green;
 }
