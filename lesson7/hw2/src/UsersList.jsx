@@ -9,6 +9,8 @@ class UsersList extends Component {
         this.state = {
             currentPage: 0,
             showedUsers: 0,
+            disabledRight: false,
+            disabledLeft: false,
         }
     }
 
@@ -16,17 +18,38 @@ class UsersList extends Component {
         this.setState({
             currentPage: this.state.currentPage - 1,
             showedUsers: this.state.showedUsers - 3,
+            disabledRight: false,
         })
+        this.leftButtonTrigger();
     }
 
     goNext = () => {
         this.setState({
             currentPage: this.state.currentPage + 1,
             showedUsers: this.state.showedUsers + 3,
+            disabledLeft: false,
         })
+        this.rightButtonTrigger();
+    }
+
+    rightButtonTrigger = () => {
+        if (this.state.showedUsers + 6 >= this.props.users.length) {
+            this.setState({
+                disabledRight: true,
+            })
+        }
+    }
+
+    leftButtonTrigger = () => {
+        if (this.state.showedUsers <= 3) {
+            this.setState({
+                disabledLeft: true,
+            })
+        }
     }
 
     render() {
+
         const usersToShow = this.state.showedUsers;
         const showedUsers = this.props.users.slice(usersToShow, usersToShow + 3);
 
@@ -37,7 +60,11 @@ class UsersList extends Component {
                 goNext={this.goNext}
                 currentPage={this.state.currentPage}
                 totalItems={this.props.users.length}
-                itemsPerPage={this.props.users}
+                // itemsPerPage={this.props.users}
+                rightButtonState={this.state.disabledRight}
+                leftButtonState={this.state.disabledLeft}
+                showedUsers={this.state.showedUsers}
+
             />
             <ul className="users">
                 {showedUsers.map(user => <User key={user.id} {...user} />)}
@@ -48,3 +75,57 @@ class UsersList extends Component {
 };
 
 export default UsersList;
+
+
+
+
+// import React, { Component } from 'react';
+// import User from './User';
+// import Pagination from './Pagination';
+
+// class UsersList extends Component {
+//     constructor(props) {
+//         super(props);
+
+//         this.state = {
+//             currentPage: 0,
+//             showedUsers: 0,
+//         }
+//     }
+
+//     goPrev = () => {
+//         this.setState({
+//             currentPage: this.state.currentPage - 1,
+//             showedUsers: this.state.showedUsers - 3,
+//         })
+//     }
+
+//     goNext = () => {
+//         this.setState({
+//             currentPage: this.state.currentPage + 1,
+//             showedUsers: this.state.showedUsers + 3,
+//         })
+//     }
+
+//     render() {
+//         const usersToShow = this.state.showedUsers;
+//         const showedUsers = this.props.users.slice(usersToShow, usersToShow + 3);
+
+//         return (
+//             <>
+//             <Pagination
+//                 goPrev={this.goPrev}
+//                 goNext={this.goNext}
+//                 currentPage={this.state.currentPage}
+//                 totalItems={this.props.users.length}
+//                 itemsPerPage={this.props.users}
+//             />
+//             <ul className="users">
+//                 {showedUsers.map(user => <User key={user.id} {...user} />)}
+//             </ul>
+//             </>
+//         )
+//     }
+// };
+
+// export default UsersList;
