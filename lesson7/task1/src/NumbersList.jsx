@@ -5,7 +5,7 @@ import './index.scss';
 const NumbersList = ({numbList}) => {
     return (
         <ul>
-            {numbList.map(num => <li>{num}</li>)}
+            {numbList.map((num, index) => <li key={index}>{num}</li>)}
         </ul>
     )
 };
