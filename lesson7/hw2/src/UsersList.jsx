@@ -8,7 +8,7 @@ class UsersList extends Component {
 
         this.state = {
             currentPage: 0,
-            showedUsers: 0,
+            showedUsers: -3,
             disabledRight: false,
             disabledLeft: false,
         }
@@ -67,7 +67,8 @@ class UsersList extends Component {
 
             />
             <ul className="users">
-                {showedUsers.map(user => <User key={user.id} {...user} />)}
+                {this.state.currentPage == 0 ? null :
+                showedUsers.map(user => <User key={user.id} {...user} />)}
             </ul>
             </>
         )
