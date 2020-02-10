@@ -41,7 +41,7 @@ class Auth extends Component {
 
         return (
                 !this.state.isLoggedIn ?
-                    <Login onLogin={() => this.onLogin} /> :
+                    <Login onLogin={this.onLogin} /> :
                     spinnerOrLogout
         )
     }

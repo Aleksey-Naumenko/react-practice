@@ -6,21 +6,18 @@ class ColorPicker extends Component {
         super(props);
 
         this.state = {
-            hovered: false,
             pickerTile: 'Hower the button!'
         }
     }
 
     onShowColor = color => {
         this.setState({
-            hovered: !this.state.hovered,
             pickerTile: color,
         });
     }
 
     onSetDefault = () => {
         this.setState({
-            hovered: !this.state.hovered,
             pickerTile: 'Hower the button!'
         })
     }
@@ -35,17 +32,17 @@ class ColorPicker extends Component {
                     <button
                         className="picker__button picker__button_coral"
                         onMouseOver={() => this.onShowColor('Coral')}
-                        onMouseOut={() => this.onSetDefault()}
+                        onMouseOut={this.onSetDefault}
                     ></button>
                     <button
                         className="picker__button picker__button_aqua"
                         onMouseOver={() => this.onShowColor('Aqua')}
-                        onMouseOut={() => this.onSetDefault()}
+                        onMouseOut={this.onSetDefault}
                     ></button>
                     <button
                         className="picker__button picker__button_bisque"
                         onMouseOver={() => this.onShowColor('Bisque')}
-                        onMouseOut={() => this.onSetDefault()}
+                        onMouseOut={this.onSetDefault}
                     ></button>
                 </div>
             </>
