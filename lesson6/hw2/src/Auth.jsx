@@ -34,15 +34,15 @@ class Auth extends Component {
     }
 
     render() {
+
+        const spinnerOrLogout = !this.state.spinnerRolling ?
+        <Logout onLogout={() => this.onLogout} /> :
+        <Spinner size={30} />;
+
         return (
-            <>
-                {!this.state.isLoggedIn ?
+                !this.state.isLoggedIn ?
                     <Login onLogin={() => this.onLogin} /> :
-                    !this.state.spinnerRolling ?
-                        <Logout onLogout={() => this.onLogout} /> :
-                        <Spinner size={30} />
-                }
-            </>
+                    spinnerOrLogout
         )
     }
 }
