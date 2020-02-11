@@ -13,7 +13,14 @@ class TransactionsList extends Component {
         return (
             <ul className="transactions">
                 {this.props.transactions.map(transaction => 
-                    <Transaction transaction={transaction} key={transaction.id}/> )}
+                    <Transaction 
+                        from={transaction.from}
+                        to={transaction.to}
+                        amount={transaction.amount}
+                        rate={transaction.rate}
+                        time={transaction.time}
+                        key={transaction.id}/> )
+                }
             </ul>
         )
     }
