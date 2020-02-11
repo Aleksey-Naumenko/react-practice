@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import './index.scss';
 
 
-const NumbersList = ({numbList}) => {
+const NumbersList = ({numbers}) => {
     return (
         <ul>
-            {numbList.map((num, index) => <li key={index}>{num}</li>)}
+            {numbers.map((num, index) => <li key={index}>{num}</li>)}
         </ul>
     )
 };
