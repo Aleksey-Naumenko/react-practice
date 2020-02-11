@@ -8,29 +8,27 @@ class UsersList extends Component {
 
         this.state = {
             currentPage: 0,
-            showedUsers: 0,
         }
     }
 
     goPrev = () => {
         this.setState({
             currentPage: this.state.currentPage - 1,
-            showedUsers: this.state.showedUsers - 3,
         })
     }
 
     goNext = () => {
         this.setState({
             currentPage: this.state.currentPage + 1,
-            showedUsers: this.state.showedUsers + 3,
         })
     }
 
     render() {
-        
-        const usersToShow = this.state.showedUsers;
-        const showedUsers = this.props.users.slice(usersToShow, usersToShow + 3);
 
+        const currentPage = this.state.currentPage;
+        const nextPage = currentPage * 3;
+        const showedUsers = this.props.users.slice(currentPage * 3, nextPage + 3);
+        
         return (
             <>
             <Pagination

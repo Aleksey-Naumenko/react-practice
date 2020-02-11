@@ -18,7 +18,7 @@ const users = [
         id: 'id2'
     },
     {
-        name: 'Bod',
+        name: 'Bob',
         age: 34,
         id: 'id3'
     },
