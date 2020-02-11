@@ -8,9 +8,7 @@ class UsersList extends Component {
 
         this.state = {
             currentPage: 0,
-            showedUsers: -3,
-            disabledRight: false,
-            disabledLeft: false,
+            showedUsers: 0,
         }
     }
 
@@ -18,38 +16,18 @@ class UsersList extends Component {
         this.setState({
             currentPage: this.state.currentPage - 1,
             showedUsers: this.state.showedUsers - 3,
-            disabledRight: false,
         })
-        this.leftButtonTrigger();
     }
 
     goNext = () => {
         this.setState({
             currentPage: this.state.currentPage + 1,
             showedUsers: this.state.showedUsers + 3,
-            disabledLeft: false,
         })
-        this.rightButtonTrigger();
-    }
-
-    rightButtonTrigger = () => {
-        if (this.state.showedUsers + 6 >= this.props.users.length) {
-            this.setState({
-                disabledRight: true,
-            })
-        }
-    }
-
-    leftButtonTrigger = () => {
-        if (this.state.showedUsers <= 3) {
-            this.setState({
-                disabledLeft: true,
-            })
-        }
     }
 
     render() {
-
+        
         const usersToShow = this.state.showedUsers;
         const showedUsers = this.props.users.slice(usersToShow, usersToShow + 3);
 
@@ -60,15 +38,10 @@ class UsersList extends Component {
                 goNext={this.goNext}
                 currentPage={this.state.currentPage}
                 totalItems={this.props.users.length}
-                // itemsPerPage={this.props.users}
-                rightButtonState={this.state.disabledRight}
-                leftButtonState={this.state.disabledLeft}
-                showedUsers={this.state.showedUsers}
-
+                itemsPerPage={this.state.showedUsers}
             />
             <ul className="users">
-                {this.state.currentPage == 0 ? null :
-                showedUsers.map(user => <User key={user.id} {...user} />)}
+                {showedUsers.map(user => <User key={user.id} {...user} />)}
             </ul>
             </>
         )
