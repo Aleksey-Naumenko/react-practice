@@ -5,8 +5,6 @@ class Dimensions extends Component {
     constructor(props) {
         super(props);
 
-        // const { innerWidth, innerHeight } = window;
-
         this.state = {
             width: null,
             height: null,
@@ -36,7 +34,7 @@ class Dimensions extends Component {
             width,
             height,
         });
-        document.title = `${innerWidth}px - ${innerHeight}px`;
+        document.title = `${innerWidth} x ${innerHeight}`;
     }
 
     render() {
