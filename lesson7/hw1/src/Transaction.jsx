@@ -3,7 +3,7 @@ import './index.scss';
 import moment from 'moment';
 
 
-const Transaction = (props) => {
+const Transaction = props => {
     
     const amount = new Intl.NumberFormat('en-GB').format(props.amount);
     const time = moment(props.time).format('HH:mm');
