@@ -9,7 +9,7 @@ class UserForm extends Component {
         const formData = [...new FormData(this.formRef)]
             .reduce((acc, [name, value]) => ({...acc, [name]: value}), {});
 
-            console.log(formData);
+        alert(formData);
     }
 
     setRef = node => {
