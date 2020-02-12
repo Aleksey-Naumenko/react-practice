@@ -19,8 +19,9 @@ class UserForm extends Component {
             [name]: val,
         });
     }
-    onSubmit = e => {
-        e.preventDefault();
+    
+    onSubmit = event => {
+        event.preventDefault();
         console.log(this.state);
     }
 
