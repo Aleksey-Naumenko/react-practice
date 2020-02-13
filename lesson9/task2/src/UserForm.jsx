@@ -2,12 +2,18 @@ import React, { Component } from 'react';
 
 
 class UserForm extends Component {
-    state = {
-        name: '',
-        student: '',
-        occupation: '',
-        about: '',
+    constructor(props) {
+        super(props);
+        this.state = {
+            name: '',
+            student: '',
+            occupation: '',
+            about: '',
+        }
+
+        this.onSubmit =  this.props.onSubmit.bind(this);
     }
+    
 
     handleChange = e => {
         const { name, value, checked, type } = e.target;
@@ -20,10 +26,10 @@ class UserForm extends Component {
         });
     }
     
-    onSubmit = event => {
-        event.preventDefault();
-        console.log(this.state);
-    }
+    // onSubmit = event => {
+    //     event.preventDefault();
+    //     console.log(this.state);
+    // }
 
     render() {
         return (
