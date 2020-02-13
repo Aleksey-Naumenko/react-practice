@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import UserForm from './UserForm';
 
-const App = props => {
+const App = () => {
 
     function onSubmit (event) {
         event.preventDefault();
