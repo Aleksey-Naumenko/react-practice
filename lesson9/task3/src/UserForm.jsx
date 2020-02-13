@@ -2,14 +2,16 @@ import React, { Component } from 'react';
 
 
 class UserForm extends Component {
-
+    constructor(props) {
+        super(props);
+    }
 
     onSubmit = event => {
         event.preventDefault();
         const formData = [...new FormData(this.formRef)]
-            .reduce((acc, [name, value]) => ({...acc, [name]: value}), {});
+            .reduce((acc, [name, value]) => ({ ...acc, [name]: value }), {});
 
-        console.log(formData);
+        this.props.onSubmit(formData);
     }
 
     setRef = node => {
@@ -30,16 +32,16 @@ class UserForm extends Component {
                 </div>
                 <div className="form-control">
                     <label className="form-label" htmlFor="student">Student</label>
-                    <input 
-                        className="form-input" 
-                        type="checkbox" id="student" 
+                    <input
+                        className="form-input"
+                        type="checkbox" id="student"
                         name="student"
                     />
                 </div>
                 <div className="form-control">
                     <label className="form-label" id="occupation" htmlFor="occupation">Occupation</label>
-                    <select 
-                        name="occupation" 
+                    <select
+                        name="occupation"
                         className="form-input"
                     >
                         <option value="London">London</option>
@@ -51,7 +53,7 @@ class UserForm extends Component {
                 <div className="form-control">
                     <label className="form-label" id="about" htmlFor="about">About</label>
                     <textarea
-                        name="about" 
+                        name="about"
                         className="form-input"
                     />
                 </div>
