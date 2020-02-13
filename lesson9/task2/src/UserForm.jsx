@@ -10,10 +10,12 @@ class UserForm extends Component {
             occupation: '',
             about: '',
         }
-
-        this.onSubmit =  this.props.onSubmit.bind(this);
     }
     
+    onSubmit = event => {
+        event.preventDefault();
+        this.props.onSubmit(this.state);
+    }
 
     handleChange = e => {
         const { name, value, checked, type } = e.target;
@@ -25,11 +27,6 @@ class UserForm extends Component {
             [name]: val,
         });
     }
-    
-    // onSubmit = event => {
-    //     event.preventDefault();
-    //     console.log(this.state);
-    // }
 
     render() {
         return (

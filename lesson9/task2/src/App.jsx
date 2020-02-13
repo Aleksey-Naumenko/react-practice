@@ -3,13 +3,8 @@ import UserForm from './UserForm';
 
 const App = () => {
 
-    function onSubmit (event) {
-        event.preventDefault();
-        console.log(this.state);
-    }
-
     return (
-        <UserForm onSubmit={onSubmit}/>
+        <UserForm onSubmit={formData => console.log(formData)}/>
     );
 };
 

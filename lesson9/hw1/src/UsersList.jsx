@@ -6,7 +6,6 @@ import Pagination from './Pagination';
 const UsersList = props => {
     return (
         <>
-            <Pagination />
 
             <ul className="users">
                 <User name={name} age={age} />
