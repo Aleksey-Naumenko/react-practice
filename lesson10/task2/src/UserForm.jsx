@@ -1,8 +1,8 @@
 import React from 'react';
 
-const UserForm = ({ userData, onChange }) => {
-    const eventHandler = e => {
-        onChange(e);
+const UserForm = ({ userData, handleChange }) => {
+    const onChange = e => {
+        handleChange(e);
     }
     return (
         <form className="user-form">
@@ -11,14 +11,14 @@ const UserForm = ({ userData, onChange }) => {
                 name="firstName" 
                 className="user-form__input" 
                 value={userData.firstName}
-                onChange={eventHandler}
+                onChange={onChange}
             />
             <input 
                 type="text" 
                 name="lastName" 
                 className="user-form__input" 
                 value={userData.lastName}
-                onChange={eventHandler}
+                onChange={onChange}
             />
         </form>
     );

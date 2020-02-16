@@ -27,8 +27,8 @@ class App extends Component {
             <div className="page">
                 <h1 className="title">{`Hello, ${userData.firstName} ${userData.lastName}`}</h1>
                 <main className="content">
-                <ShoppingCart userData={userData}/>
-                <Profile userData={this.state.userData} onChange={this.handleChange} />
+                    <ShoppingCart userData={userData}/>
+                    <Profile userData={userData} handleChange={this.handleChange} />
                 </main>
             </div>
         )
