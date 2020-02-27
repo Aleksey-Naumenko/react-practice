@@ -16,10 +16,10 @@ const Products = ({ match }) => {
                 </li>
             </ul>
             <Switch>
-                <Route exact path="/products">
+                <Route exact path={match.url}>
                     <span>Select a product please</span>
                 </Route>
-                <Route path="/products/:productId" component={Product} />
+                <Route path={`${match.url}/:productId`} component={Product} />
             </Switch>
         </div>
     )

@@ -2,7 +2,7 @@ import React from 'react';
 
 const Product = ({ match }) => {
     return (
-    <div className="product">{`The product is ${match.params.productId}`}</div>
+        <div className="product">{`Product is a ${match.params.productId}`}</div>
     );
 };
 
