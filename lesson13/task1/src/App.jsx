@@ -4,7 +4,7 @@ import Home from './Home';
 import Products from './Products';
 import Contacts from './Contacts';
 import PageNotFound from './PageNotFound';
-import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 const App = () => {
     return (
