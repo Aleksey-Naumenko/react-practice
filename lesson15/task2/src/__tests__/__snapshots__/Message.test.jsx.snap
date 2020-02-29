@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Message /> component should hide - no text passed 1`] = `""`;
+
+exports[`<Message /> should render text passed 1`] = `
+<div
+  className="message"
+>
+  Hello
+</div>
+`;
