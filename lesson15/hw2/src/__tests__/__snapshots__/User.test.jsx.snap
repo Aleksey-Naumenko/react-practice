@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<User /> should render passed age 1`] = `
+<li
+  className="user"
+>
+  <span
+    className="user__name"
+  >
+    Tom
+  </span>
+  <span
+    className="user__age"
+  >
+    100
+  </span>
+</li>
+`;
+
+exports[`<User /> should render passed name 1`] = `
+<li
+  className="user"
+>
+  <span
+    className="user__name"
+  >
+    Tom
+  </span>
+  <span
+    className="user__age"
+  />
+</li>
+`;
