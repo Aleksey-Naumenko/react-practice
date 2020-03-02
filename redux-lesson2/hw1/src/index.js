@@ -1,4 +1,3 @@
-import { usersReducer } from './users.reducer';
 import { store } from './store';
 import { deleteUser } from './users.actions';
 import { addUser } from './users.actions';
