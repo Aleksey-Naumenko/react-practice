@@ -7,7 +7,7 @@ const test = () => {
     store.dispatch(addUser({ id: 100, name: 'Gendalf'}));
     store.dispatch(addUser({ id: 12, name: 'Bilbo'}));
     store.dispatch(addUser({ id: 22, name: 'Pipin'}));
-    // store.dispatch(deleteUser(22));
+    store.dispatch(deleteUser(22));
 
 }
 
