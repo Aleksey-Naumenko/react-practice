@@ -1,16 +1,15 @@
 export const ADD = 'USER/ADD';
 export const DELETE = 'USER/DELETE'
 
-export const addUser = userData => {
+export const setUser = userData => {
     return {
         type: ADD,
         payload: userData,
     }
 };
 
-export const deleteUser = userId => {
+export const removeUser = () => {
     return {
         type: DELETE,
-        payload: userId,
     }
 };
