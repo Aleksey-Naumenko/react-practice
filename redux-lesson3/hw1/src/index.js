@@ -5,12 +5,12 @@ import { removeProduct, addProduct } from './cart.actions';
 
 const test = () => {
     store.subscribe(() => console.log(store.getState()));
-    store.dispatch(setUser({ id: 100, name: 'Gendalf'}));
+    store.dispatch(setUser({ name: 'Gendalf' }));
     store.dispatch(removeUser(100));
-    store.dispatch(addProduct({ id: 12, name: 'Milk'}));
-    store.dispatch(addProduct({ id: 22, name: 'Bread'}));
+    store.dispatch(addProduct({ id: 12, name: 'Milk' }));
+    store.dispatch(addProduct({ id: 22, name: 'Bread' }));
     store.dispatch(removeProduct(22));
-    store.dispatch(setLanguage('us'));
+    // store.dispatch(setLanguage('us'));
 }
 
 test();
