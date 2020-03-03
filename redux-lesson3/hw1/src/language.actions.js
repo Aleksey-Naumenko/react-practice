@@ -1,6 +1,8 @@
-export const setLanguage = lang => {
+export const setLanguage = language => {
     return {
         type: 'language',
-        payload: lang,
+        payload: {
+            language,
+        }
     };
 };

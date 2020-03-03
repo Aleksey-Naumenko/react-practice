@@ -12,13 +12,3 @@ const appReducer = combineReducers({
 const store = createStore(appReducer);
 
 export default store;
-
-
-
-// export const initState = {
-//     language: 'en',
-//     user: null,
-//     cart: {
-//         products: [],
-//     },
-// };
