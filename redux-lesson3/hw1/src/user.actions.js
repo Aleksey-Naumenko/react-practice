@@ -1,9 +1,9 @@
-export const ADD = 'USER/ADD';
-export const DELETE = 'USER/DELETE'
+export const SET = 'USER/SET';
+export const REMOVE = 'USER/REMOVE'
 
 export const setUser = userData => {
     return {
-        type: ADD,
+        type: SET,
         payload: {
             userData,
         }
@@ -12,6 +12,6 @@ export const setUser = userData => {
 
 export const removeUser = () => {
     return {
-        type: DELETE,
+        type: REMOVE,
     }
 };

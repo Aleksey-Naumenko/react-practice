@@ -1,10 +1,10 @@
-import { ADD, DELETE } from './user.actions';
+import { SET, REMOVE } from './user.actions';
 
 export const userReducer = (state = null, action) => {
     switch (action.type) {
-        case ADD:
+        case SET:
             return action.payload.userData;
-        case DELETE:
+        case REMOVE:
             return null;
         default:
             return state;
