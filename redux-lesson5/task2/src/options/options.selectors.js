@@ -19,10 +19,3 @@ export const availableOptionsSelector = createSelector(
     (optionsList, selectedIds) => {
         return optionsList.filter(option => !selectedIds.includes(option.id));
     });
-
-export const availableOptionsSelector = state => {
-    const allOptionsList = optionsListSelector(state);
-    const selectedIds = selectedIdsSelector(state);
-
-    return allOptionsList.filter(option => !selectedIds.includes(option.id));
-};
