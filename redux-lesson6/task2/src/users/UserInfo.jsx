@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { isFetchingSelector, userDataSelector } from './users.selectors';
-import * as userActions from './users.actions';
 import Spinner from './Spinner';
 import PropTypes from 'prop-types';
 
@@ -37,9 +36,5 @@ const mapState = state => {
         userData: userDataSelector(state),
     }
 };
-
-// const mapDispatch = {
-//     showSpinner: userActions.showSpinner,
-// }
 
 export default connect(mapState, null)(UserInfo);

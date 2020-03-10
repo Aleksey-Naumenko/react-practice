@@ -15,3 +15,9 @@ export const userDataReceived = userData => {
         }
     }
 };
+
+export const getUserData = () => {
+    return function () {
+        console.log('lol');
+    }
+};

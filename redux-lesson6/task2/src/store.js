@@ -1,5 +1,10 @@
-import { createStore, applyMiddleware, compose } from 'redux';
+import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
 import userReducer from './users/users.reducer';
+import thunk from 'redux-thunk';
+
+const reducer = combineReducers({
+    users: userReducer,
+})
 
 const logger = store => next => action => {
     console.group(action.type);
@@ -13,9 +18,9 @@ const logger = store => next => action => {
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const store = createStore(
-    userReducer,
+    reducer,
     composeEnhancers(
-        applyMiddleware(logger),
+        applyMiddleware(thunk),
     )
 );
 
