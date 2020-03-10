@@ -7,7 +7,7 @@ const logger = store => next => action => {
     let result = next(action);
     console.log('next state', store.getState());
     console.groupEnd();
-    // return result;
+    return result;
 };
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
