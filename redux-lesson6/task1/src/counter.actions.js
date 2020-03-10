@@ -1,6 +1,6 @@
 export const INCREMENT = 'COUNTER/INCREMENT';
 export const DECREMENT = 'COUNTER/DECREMENT';
-export const RESET = 'COUTER/RESET';
+export const RESET = 'COUNTER/RESET';
 
 export const increment = () => {
     return {
