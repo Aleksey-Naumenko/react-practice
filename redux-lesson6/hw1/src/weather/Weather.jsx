@@ -3,10 +3,10 @@ import { connect } from 'react-redux';
 import {citiesListSelector} from './weather.selectors';
 import * as weatherActions from './weather.actions';
 
-const Weather = ({ cities, getCitiesList }) => {
+const Weather = ({ cities, getWeatherData }) => {
 
     useEffect(() => {
-        getCitiesList();
+        getWeatherData();
     }, []);
 
     return (
@@ -31,7 +31,7 @@ const mapState = state => {
 };
 
 const mapDisptch = {
-    getCitiesList: weatherActions.getCitiesList,
+    getWeatherData: weatherActions.getWeatherData,
 }
 
 export default connect(mapState, mapDisptch)(Weather);

@@ -11,7 +11,7 @@ export const citiesListReceived = citiesList => {
     }
 };
 
-export const getCitiesList = () => {
+export const getWeatherData = () => {
     return function(dispatch, getState) {
         fetchListOfCities()
             .then(citiesList => {
