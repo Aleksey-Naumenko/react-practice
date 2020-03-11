@@ -14,7 +14,7 @@ const Weather = ({ cities, getWeatherData }) => {
             <h1 className="weather__title">Weather data</h1>
             <ul className="cities-list">
                 {cities && cities.map(city => (
-                    <li className="city">
+                    <li className="city" key={city.id}>
                         <span className="city__name">{city.name}</span>
                         <span className="city__temperature">{city.temperature}</span>
                     </li>

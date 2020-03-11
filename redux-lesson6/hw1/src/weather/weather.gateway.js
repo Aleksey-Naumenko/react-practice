@@ -9,10 +9,3 @@ export const fetchListOfCities = () => {
             throw new Error('Failed to Fetch!');
         });
 };
-
-// const er = () => {
-//     return fetchListOfCities()
-//         .then(res => console.log(res))
-// }
-
-// er();
