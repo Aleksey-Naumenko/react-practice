@@ -1,4 +1,4 @@
-import {fetchListOfCities} from './weather.gateWay'
+import {fetchListOfCities} from './weather.gateway';
 
 export const CITIES_LIST_RECEIVED = 'CITIES_LIST_RECEIVED';
 
