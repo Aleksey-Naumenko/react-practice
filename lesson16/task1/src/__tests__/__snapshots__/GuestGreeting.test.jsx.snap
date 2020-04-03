@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<GuestGreeting /> should render correctly guest greeting 1`] = `
+<h1>
+  Hi stranger ✌ Please login 🚀
+</h1>
+`;
