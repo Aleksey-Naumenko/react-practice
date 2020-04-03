@@ -1,13 +1,6 @@
 import React from 'react';
 import Counter from '../Counter';
 import { shallow } from 'enzyme';
-// import { getUserData } from '../usersGateway';
-
-// jest.mock('../usersGateway', () => {
-//   return {
-//     getUserData: jest.fn(() => Promise.resolve())
-//   }
-// });
 
 describe('Counter', () => {
   it ('initial state should be equal to "0" ', () => {
