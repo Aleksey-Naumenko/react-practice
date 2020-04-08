@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Task /> should render TodoList 1`] = `
+<li
+  className="list-item"
+>
+  <input
+    className="list-item__checkbox"
+    onChange={[Function]}
+    type="checkbox"
+  />
+  <span
+    className="list-item__text"
+  >
+    Task-1
+  </span>
+  <button
+    className="list-item__delete-btn"
+    onClick={[Function]}
+  />
+</li>
+`;
+
+exports[`<Task /> should render undone task 1`] = `
+<li
+  className="list-item"
+>
+  <input
+    className="list-item__checkbox"
+    defaultChecked={false}
+    onChange={[Function]}
+    type="checkbox"
+  />
+  <span
+    className="list-item__text"
+  >
+    Task-1
+  </span>
+  <button
+    className="list-item__delete-btn"
+    onClick={[Function]}
+  />
+</li>
+`;

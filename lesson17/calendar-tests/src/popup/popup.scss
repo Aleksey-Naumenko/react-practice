@@ -1,0 +1,135 @@
+@import '../variables.scss';
+
+.popup-modal {
+    display: flex;
+    height: 300px;
+    max-width: 100%;
+    padding: 10px;
+    background-color: $white;
+    color:$dark-violet-blue;
+    border-radius: 5px;
+    box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.75);
+    position: fixed;
+    z-index: 3;
+    top: 180px;
+    left: 100px;
+    display: block;
+}
+
+.popup {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    outline: none;
+
+    &__header {
+        color: $text-grey;
+        align-self: flex-end;
+        display: flex;
+        flex-direction: column;
+
+        &_close-btn {
+            align-self: flex-end;
+            cursor: pointer;
+            transition: 1s;
+
+            &:hover {
+                transform: rotate(90deg);
+            }
+        }
+
+        &_title-input {
+            width: 300px;
+            border: none;
+            outline: none;
+            border-bottom: 1px solid $classicGrey;
+            align-self: flex-end;
+            margin-top: 10px;
+            color: $light-violet;
+        }
+    }
+
+    &__color-scheme{
+        padding-left: 10px;
+
+    }
+    &__color-scheme_label-text{
+        color: $text-grey;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-left: 10px;
+
+
+        &_icon {
+            transition: 2s;
+        
+            &:hover {
+                transform: rotate(360deg);
+            }
+        }
+
+        &_date-from {
+            outline: none;
+            border: none;
+            color: $text-grey;
+        }
+
+        &_date-to {
+            outline: none;
+            border: none;
+            color: $text-grey;
+        }
+
+        &_duration {
+            display: flex;
+            align-items: center;
+
+            &-from, &-to {
+                outline: none;
+                border: none;
+                color: $text-grey;
+            }
+        }
+    }
+
+    &__description {
+        padding-left: 10px;
+        display: flex;
+
+        &_text {
+            outline: none;
+            border: none;
+            margin-left: 20px;
+            color: $text-grey;
+        }
+    }
+
+    &__action {
+        display: flex;
+        justify-content: space-between;
+
+        &_delete {
+            cursor: pointer;
+            padding-left: 10px;
+        }
+
+        &_save {
+            width: 90px;
+            height: 30px;
+            border-radius: 3px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            color: $text-white;
+            background-color: $light-violet;
+ 
+
+            font-size: 17px;
+        }
+    }
+}

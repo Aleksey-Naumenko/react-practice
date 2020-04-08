@@ -1,0 +1,30 @@
+@import '../../variables.scss';
+
+.day-event {
+    width: 90%;
+    font-size: 11px;
+    color: $text-white;
+    background: linear-gradient(167deg, rgba(126,109,232,1) 5%, rgba(26,168,190,1) 100%);
+    border-radius: 3px;
+    padding: 2px;
+    position: absolute;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.day-event_delete {
+        width: 100%;
+        height: 34px;
+        border-radius: 5px;
+        background-color: rgb(88, 78, 78);
+        color: #fff;
+        box-shadow: 5px 5px 15px 3px rgba(0,0,0,0.75);
+        z-index: 10;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        display: block;
+        text-align: center;
+        padding-top: 6px;
+        cursor: pointer;
+}

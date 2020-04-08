@@ -1,0 +1,62 @@
+@import '../variables.scss';
+
+.days-container {
+    display: flex;
+    position: fixed;
+    z-index: 999;
+    margin-top: 60px;
+    width: 100%;
+    height: 100px;
+    background-color: $white;
+    color: $text-grey;
+    border-bottom: 1px solid #d5d5d5;
+    font-family: Roboto,Helvetica,Arial,sans-serif;
+    box-shadow: 0px 8px 5px -2px rgba(0,0,0,0.1);
+    .gmt {
+        min-width: 50px;
+        font-size: 10px;
+        align-self: flex-end;
+        padding: 0 0 10px 8px;
+    }
+}
+
+.day-name {
+    z-index: 2;
+    font-size: 9px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    letter-spacing: .8px;
+}
+
+.day-date {
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+    font-size: 20px;
+    color: $text-darkGrey;
+    padding: 6px;
+    min-width: 35px;
+
+    &:hover{
+        background-color: $lightGrey;
+        color: $text-darkGrey;
+        border-radius: 100%;
+        cursor: default;
+    }
+
+    &_current {
+        background-color: $blue;
+        color: $text-white;
+        border-radius: 100%;
+        cursor: default;
+    }   
+}
+
+.day {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}

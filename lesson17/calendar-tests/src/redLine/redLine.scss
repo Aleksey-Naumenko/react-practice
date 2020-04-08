@@ -1,0 +1,26 @@
+@import '../variables.scss'; 
+
+.redline {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    height: 8px;
+    z-index: 2;
+    margin-top: 0px;
+}
+
+.line {
+    position: relative;
+    background-color: $red;
+    height: 2px;
+    width: 100%;
+}
+.dot {
+    position: relative;
+    border-radius: 100%;
+    background-color: $red;
+    height: 8px;
+    width: 8px;
+
+}
