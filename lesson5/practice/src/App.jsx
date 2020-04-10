@@ -1,53 +1,45 @@
-import React, { Component } from 'react';
-import './styles.scss';
+import React, { Component } from "react";
+import User from "./User";
 
-class ColorPicker extends Component {
-    constructor(props) {
-        super(props);
+class App extends Component {
+  state = {
+    userId: "facebook",
+  };
 
-        this.state = {
-            pickerTile: 'Hower the button!'
-        }
-    }
+  setUser = (userId) => {
+    this.setState({
+      userId,
+    });
+  };
 
-    onShowColor = color => {
-        this.setState({
-            pickerTile: color,
-        });
-    }
+  shouldComponentUpdate(nextProps, nextState) {
+    const { userId } = this.state;
+    return nextState.userId !== userId;
+  };
 
-    onSetDefault = () => {
-        this.setState({
-            pickerTile: 'Hower the button!'
-        })
-    }
-
-    render() {
-        return (
-            <>
-                <div className="picker__title">
-                    {this.state.pickerTile}
-                </div>
-                <div>
-                    <button
-                        className="picker__button picker__button_coral"
-                        onMouseOver={() => this.onShowColor('Coral')}
-                        onMouseOut={this.onSetDefault}
-                    ></button>
-                    <button
-                        className="picker__button picker__button_aqua"
-                        onMouseOver={() => this.onShowColor('Aqua')}
-                        onMouseOut={this.onSetDefault}
-                    ></button>
-                    <button
-                        className="picker__button picker__button_bisque"
-                        onMouseOver={() => this.onShowColor('Bisque')}
-                        onMouseOut={this.onSetDefault}
-                    ></button>
-                </div>
-            </>
-        )
-    }
+  render() {
+    const { userId } = this.state;
+    return (
+      <div className="page">
+        <div className="page__content">
+          <h1>Users</h1>
+          <ul className="navigation">
+            <li className="navigation__item">
+              <button type="button" onClick={() => this.setUser("facebook")}>
+                Facebook
+              </button>
+            </li>
+            <li className="navigation__item">
+              <button type="button" onClick={() => this.setUser("github")}>
+                Github
+              </button>
+            </li>
+          </ul>
+        </div>
+        <User userId={userId} />
+      </div>
+    );
+  }
 }
 
-export default ColorPicker;
+export default App;

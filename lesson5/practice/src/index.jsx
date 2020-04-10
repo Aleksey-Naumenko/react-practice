@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './styles.scss';
 import App from './App';
 
-<div className="page">
+{/* <div className="page">
                 <div className="page__content">
                     <h1>Users</h1>
                     <ul className="navigation">
@@ -24,7 +24,7 @@ const baseUrl = `https://api.github.com/users/${userId}`;
         <span className="user__name">{name}</span>
         <span className="user__location">{location}</span>
     </div>
-</div>
+</div> */}
 
 
 const rootElem = document.querySelector('#root');
