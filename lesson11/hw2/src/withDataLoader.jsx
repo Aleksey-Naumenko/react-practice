@@ -29,10 +29,11 @@ export const withDataLoader = (url) => {
 
       render() {
         const data = this.state.data;
+        const props = this.props;
         if (!data) {
           return <Spinner />;
         } else {
-          return <WrappedComponent data={data} />;
+          return <WrappedComponent data={data} {...props} />;
         }
       }
     };
